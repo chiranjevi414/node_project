@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var email = require('./routes/email')
+var email = require('./routes/email');
 
 var app = express();
 mongoose.connect('mongodb://admin:pswd@ds113063.mlab.com:13063/mongo-flexton', {useMongoClient: true});
@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/email', email);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
