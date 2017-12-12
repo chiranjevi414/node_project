@@ -10,7 +10,9 @@ var BookListSchema = new Schema({
         type: String,
         required: true
     },
-    Year: number,
+    Year: {
+        type : "number"
+    },
 
     time: {
         type: Date,
